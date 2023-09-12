@@ -7,8 +7,8 @@ import {
 } from "../store/cartSlice";
 import toast from "react-hot-toast";
 import Footer from "./Footer";
-import { withAuthenticationRequired } from "@auth0/auth0-react";
-import ReactLoading from "react-loading";
+
+
 import { MdPayment } from "react-icons/md";
 
 
@@ -106,8 +106,4 @@ function calculateTotalPrice(cartItems) {
   return totalPrice.toFixed(2);
 }
 
-export default withAuthenticationRequired(Cart, {
-  onRedirecting: () => (
-    <ReactLoading type={"cylon"} color="blue" height={667} width={375} />
-  ),
-});
+export default Cart;
